@@ -4,7 +4,7 @@ import java.util.*;
 public class PeterAndHisFriends {
 
 
-    public static String main(String[] args) {
+    public static void main(String[] args) {
         Scanner screen = new Scanner(System.in);
         System.out.println("Say something!");
         String phrase = screen.nextLine();
