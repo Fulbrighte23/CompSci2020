@@ -1,52 +1,25 @@
 package com.company;
 import java.util.Scanner;
-/* Erica Fulbright Pseudo Code
-insert given variables
-create keyboard for your own int, double, and string
-create equations for each of your variables and the given ones
-display the answer
- */
+public class Main {
 
+    /*Erica Fulbright Challenge Operators Pseudo Code
+    Import scanner
+    Create a variable for MealCost, TipPercent, and TaxPercent
+    Make them keyboard
+    Create lines of code that calculates TotalCost by adding all 3 variables
+    Print out result
+    */
+    public static void main(String[] args) {
+        Scanner keyboard = new Scanner(System.in);
+        System.out.print("Cost of meal: ");
+        double mealCost = keyboard.nextDouble();
+        System.out.print("Tip percent: ");
+        int tipPercent = keyboard.nextInt();
 
-    public class ChallengeOperators {
-
-        public static void main(String[] args) {
-            Scanner number = new Scanner(System.in);
-            String answer;
-            int i = 4;
-            double d = 4.0;
-            String s = "Greenhill";
-
-            System.out.println("Type your integer:");
-            int MyInt = number.nextInt();// makes it so that you can type the number
-            int MyInt2 = (MyInt + i);
-            System.out.println("i plus your integer is " + MyInt2);
-
-            System.out.println("Type your Double:");
-            double MyDouble = number.nextDouble();
-            double MyDouble2 = (MyDouble + d);
-            System.out.println("d plus your double equals " + MyDouble2);
-
-            System.out.println(s);
-            Scanner keyboard = new Scanner(System.in);
-            String MyString = keyboard.next();
-            String MyString2 = (s + " " + MyString);
-            System.out.println("Your new phrase is " + MyString2);
-        }
+        static double solve (double mealCost, int tipPercent, double totalCost){
+        double taxCost = (mealCost*.0625);
+        double tipCost = (tipPercent*.01)*mealCost;
+        double totalCost = (int) (mealCost+tipCost+taxCost);
+        System.out.print("Total cost: $" + totalCost);
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
