@@ -16,10 +16,11 @@ public class Main {
         System.out.print("Tip percent: ");
         int tipPercent = keyboard.nextInt();
 
-        static double solve (double mealCost, int tipPercent, double totalCost){
-        double taxCost = (mealCost*.0625);
-        double tipCost = (tipPercent*.01)*mealCost;
-        double totalCost = (int) (mealCost+tipCost+taxCost);
-        System.out.print("Total cost: $" + totalCost);
+        static double solve (double mealCost,int tipPercent,double totalCost){
+            double taxCost = (mealCost * .0625);
+            double tipCost = (tipPercent * .01) * mealCost;
+            double totalCost = (int) (mealCost + tipCost + taxCost);
+            System.out.print("Total cost: $" + totalCost);
+        }
     }
 }
