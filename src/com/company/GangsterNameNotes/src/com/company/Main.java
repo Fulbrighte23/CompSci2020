@@ -1,6 +1,6 @@
 package com.company.GangsterNameNotes.src.com.company;
 
-import com.company.Challenge1EricaJade;
+//import com.company.Challenge1EricaJade;
 
 public class Main {
 
@@ -8,10 +8,10 @@ public class Main {
 	// write your code here
             String name = "Erica";//writes name
             sayHi(name);
-            Challenge1EricaJade.line();
+            //Challenge1EricaJade.line();
             String teacher = "Maria Suarez the Teacher";
             sayHi(teacher);
-            Challenge1EricaJade.line();
+            //Challenge1EricaJade.line();
         }
 
         public static void sayHi(String name) {
@@ -26,7 +26,7 @@ public class Main {
             if (indexOf > 0) {
                 String partial = name.substring(indexOf + 1);// give you thr string from that index to end
                 System.out.println(partial);
-                Challenge1EricaJade.line();
+                //Challenge1EricaJade.line();
 
                 if (name.length() > 4) {
                     partial = name.substring(1, indexOf);

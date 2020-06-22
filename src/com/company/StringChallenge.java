@@ -44,26 +44,31 @@ Return evenLetter +" "+ oddLetter// returns back up to return method
  */
 
     public static void main(String[] args) {
-        String userWord = "Whatever";
-        String newWord = scramble(userWord);
-        System.out.println(newWord);
-    }
-    public static String scramble(String userWord){
-        String word = "";
-        String oddWord= "";
-        String evenWord= "";
-        for(int even = 0; even < userWord.length(); even+=2)
-        {
-            char temp = userWord.charAt(even);
-            evenWord = evenWord + temp;
+        Scanner keyboard = new Scanner(System.in); // makes it so that the person can type
+        System.out.print("Type in a word to have it scrambled: ");
+        String Word = keyboard.next();
+
+        if (Word.length() > 10) {
+            System.out.print("Word must be 10 characters or less. Try again");
+        } else if (Word.length() < 10 && Word.length() > 1) {
         }
-        for(int odd = 1; odd < userWord.length(); odd+=2)
-        {
-            char temp = userWord.charAt(odd);
-            oddWord = oddWord+temp;
+
+        private static String scramble(String Word){
+            String oddWord = "";
+            String evenWord = "";
+            for (int even = 0; even < Word.length(); even += 2) //Loop for even words
+            {
+                char temp = Word.charAt(even);
+                evenWord = evenWord + temp;
+            }
+            for (int odd = 1; odd < Word.length(); odd += 2)  //loop for odd words
+            {
+                char temp = Word.charAt(odd);
+                oddWord = oddWord + temp;
+            }
+            String newWord = evenWord + " " + oddWord;
+            return newWord;
         }
-        String newWord = evenWord +" " + oddWord;
-        return newWord;
     }
 }
 
