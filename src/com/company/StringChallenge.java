@@ -53,7 +53,7 @@ Return evenLetter +" "+ oddLetter// returns back up to return method
         } else if (Word.length() < 10 && Word.length() > 1) {
         }
 
-        private static String scramble(String Word){
+       // private static String scramble(String Word){
             String oddWord = "";
             String evenWord = "";
             for (int even = 0; even < Word.length(); even += 2) //Loop for even words
@@ -67,8 +67,8 @@ Return evenLetter +" "+ oddLetter// returns back up to return method
                 oddWord = oddWord + temp;
             }
             String newWord = evenWord + " " + oddWord;
-            return newWord;
+            //return newWord;
         }
     }
-}
+
 

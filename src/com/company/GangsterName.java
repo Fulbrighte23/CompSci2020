@@ -17,7 +17,6 @@ Your gangsta name is "M. Diddy SIMPSON Marge-izzle"*/
     public static void main(String[] args) {
         String name = "Erica Fulbright";
         String lastName = "Fulbright";
-        //Challenge1EricaJade.line();
         char letter = name.charAt(0);//will print E
         System.out.print(letter + ". Diddy");
         String partial;
