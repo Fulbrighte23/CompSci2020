@@ -45,30 +45,41 @@ Return evenLetter +" "+ oddLetter// returns back up to return method
 
     public static void main(String[] args) {
         Scanner keyboard = new Scanner(System.in); // makes it so that the person can type
-        System.out.print("Type in a word to have it scrambled: ");
-        String Word = keyboard.next();
+        int T;
+        System.out.print("Enter an integer between 1-10: ");
+        T = keyboard.nextInt(); //lets person type number
+        System.out.println("Enter " + T + " Words");
 
-        if (Word.length() > 10) {
-            System.out.print("Word must be 10 characters or less. Try again");
-        } else if (Word.length() < 10 && Word.length() > 1) {
+        String[] inputWords = new String[T];// array
+        for (int count = 0; count < T; count++) {//counts how many times they've input a word
+            inputWords[count] = keyboard.next(); // InputWords is the method!!
         }
-
-       // private static String scramble(String Word){
-            String oddWord = "";
-            String evenWord = "";
-            for (int even = 0; even < Word.length(); even += 2) //Loop for even words
-            {
-                char temp = Word.charAt(even);
-                evenWord = evenWord + temp;
-            }
-            for (int odd = 1; odd < Word.length(); odd += 2)  //loop for odd words
-            {
-                char temp = Word.charAt(odd);
-                oddWord = oddWord + temp;
-            }
-            String newWord = evenWord + " " + oddWord;
-            //return newWord;
+        String[] outputWords = new String[T];// array
+        for (int count = 0; count < T; count++) {//counts how many times they've input a word
+            outputWords[count] = OutputWords(keyboard, inputWords[count]); // OutputWords is the method!!
+        }
+        System.out.println(" ");
+        for (int count = 0; count < T; count++) {
+            System.out.println(outputWords[count]);
         }
     }
+
+    public static String OutputWords(Scanner keyboard, String inputWords) {
+        String oddWord = "";
+        String evenWord = "";
+        for (int even = 0; even < inputWords.length(); even += 2) //Loop for even words
+        {
+            evenWord = evenWord + inputWords.charAt(even);
+        }
+        for (int odd = 1; odd < inputWords.length(); odd += 2)  //loop for odd words
+        {
+            char temp = inputWords.charAt(odd);
+            oddWord = oddWord + temp;
+        }
+        String newWord = evenWord + " " + oddWord;
+        return newWord;
+    }
+    }
+
 
 
